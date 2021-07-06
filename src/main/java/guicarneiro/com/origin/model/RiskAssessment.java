@@ -1,7 +1,6 @@
 package guicarneiro.com.origin.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import guicarneiro.com.origin.service.riskAssessment.RiskProfileBase;
 
 public class RiskAssessment {
     private final InsuranceStatus riskProfileAuto;
@@ -11,9 +10,9 @@ public class RiskAssessment {
 
     public RiskAssessment(
             @JsonProperty("auto") InsuranceStatus riskProfileAuto,
-            @JsonProperty("life") InsuranceStatus riskProfileLife,
             @JsonProperty("disability") InsuranceStatus riskProfileDisability,
-            @JsonProperty("home") InsuranceStatus riskProfileHome) {
+            @JsonProperty("home") InsuranceStatus riskProfileHome,
+            @JsonProperty("life") InsuranceStatus riskProfileLife) {
         this.riskProfileAuto = riskProfileAuto;
         this.riskProfileLife = riskProfileLife;
         this.riskProfileDisability = riskProfileDisability;

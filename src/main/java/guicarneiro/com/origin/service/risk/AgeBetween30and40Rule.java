@@ -1,15 +1,15 @@
-package guicarneiro.com.origin.service.riskRules;
+package guicarneiro.com.origin.service.risk;
 
 import guicarneiro.com.origin.model.User;
 
-public class RuleAgeBetween30and40Strategy extends RuleStrategyBase {
+public class AgeBetween30and40Rule extends BaseRiskRule {
 
-    public RuleAgeBetween30and40Strategy(User user, int score) {
+    public AgeBetween30and40Rule(User user, int score) {
         super(user, score);
     }
 
     @Override
-    public int calculate() {
+    public int apply() {
         if(getUser().getAge() >= 30 && getUser().getAge() <= 40) {
             return getScore();
         }

@@ -1,15 +1,15 @@
-package guicarneiro.com.origin.service.riskRules;
+package guicarneiro.com.origin.service.risk;
 
 import guicarneiro.com.origin.model.User;
 
-public class RuleIncomeOver200KStrategy extends RuleStrategyBase {
+public class IncomeOver200KStrategyRule extends BaseRiskRule {
 
-    public RuleIncomeOver200KStrategy(User user, int score) {
+    public IncomeOver200KStrategyRule(User user, int score) {
         super(user, score);
     }
 
     @Override
-    public int calculate() {
+    public int apply() {
         if(super.getUser().getIncome() > 200) {
             return getScore();
         }

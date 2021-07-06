@@ -1,17 +1,17 @@
-package guicarneiro.com.origin.service.riskRules;
+package guicarneiro.com.origin.service.risk;
 
 import guicarneiro.com.origin.model.User;
 
 import java.util.Calendar;
 
-public class RuleVehicleProducedLast5YearsStrategy extends RuleStrategyBase {
+public class VehicleProducedLast5YearsRule extends BaseRiskRule {
 
-    public RuleVehicleProducedLast5YearsStrategy(User user, int score) {
+    public VehicleProducedLast5YearsRule(User user, int score) {
         super(user, score);
     }
 
     @Override
-    public int calculate() {
+    public int apply() {
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
         int yearDiff = currentYear - getUser().getVehicle().getYear();
 

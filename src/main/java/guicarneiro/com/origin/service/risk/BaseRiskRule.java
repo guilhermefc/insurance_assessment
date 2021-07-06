@@ -1,12 +1,12 @@
-package guicarneiro.com.origin.service.riskRules;
+package guicarneiro.com.origin.service.risk;
 
 import guicarneiro.com.origin.model.User;
 
-public abstract class RuleStrategyBase implements RuleStrategyInterface {
+public abstract class BaseRiskRule implements RiskRule {
     private final User user;
     private final int score;
 
-    public RuleStrategyBase(User user, int score) {
+    public BaseRiskRule(User user, int score) {
         this.user = user;
         this.score = score;
     }

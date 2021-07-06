@@ -1,6 +1,8 @@
 package guicarneiro.com.origin.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 import javax.validation.constraints.*;
 import java.util.List;
@@ -19,7 +21,7 @@ public class User {
     @NotNull
     private final MaritalStatus maritalStatus;
     @NotEmpty
-    private final List<Integer> riskQuestions; // TODO: 04/07/21 validate 0 or 1 integer
+    private final List<@Min(0) @Max(1) Integer> riskQuestions;
     private final House house;
     private final Vehicle vehicle;
 

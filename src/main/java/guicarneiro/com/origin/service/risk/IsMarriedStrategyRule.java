@@ -1,16 +1,16 @@
-package guicarneiro.com.origin.service.riskRules;
+package guicarneiro.com.origin.service.risk;
 
 import guicarneiro.com.origin.model.MaritalStatus;
 import guicarneiro.com.origin.model.User;
 
-public class RuleIsMarriedStrategy extends RuleStrategyBase {
+public class IsMarriedStrategyRule extends BaseRiskRule {
 
-    public RuleIsMarriedStrategy(User user, int score) {
+    public IsMarriedStrategyRule(User user, int score) {
         super(user, score);
     }
 
     @Override
-    public int calculate() {
+    public int apply() {
         if(getUser().getMaritalStatus() != null && getUser().getMaritalStatus().equals(MaritalStatus.MARRIED)) {
             return getScore();
         }
