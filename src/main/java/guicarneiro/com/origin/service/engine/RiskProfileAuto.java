@@ -2,7 +2,7 @@ package guicarneiro.com.origin.service.engine;
 
 import guicarneiro.com.origin.model.User;
 import guicarneiro.com.origin.service.inegibility.IneligibleByNoVehicle;
-import guicarneiro.com.origin.service.risk.*;
+import guicarneiro.com.origin.service.risk.VehicleProducedLast5YearsRule;
 
 public class RiskProfileAuto extends BaseRiskProfile {
 

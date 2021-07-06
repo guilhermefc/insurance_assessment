@@ -21,10 +21,11 @@ public abstract class BaseRiskProfile {
     }
 
     private void addDefaultRiskRules() {
+        // TODO: 06/07/21 add this score numbers as project properties
         riskRules.add(new RiskQuestionsRule(user, 0));
         riskRules.add(new AgeLessThan30Rule(user, -2));
         riskRules.add(new AgeBetween30and40Rule(user, -1));
-        riskRules.add(new IncomeOver200KStrategyRule(user, -1));
+        riskRules.add(new IncomeOver200KRule(user, -1));
     }
 
     private int calculateScore() {

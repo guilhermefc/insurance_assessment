@@ -2,17 +2,18 @@ package guicarneiro.com.origin.service.engine;
 
 import guicarneiro.com.origin.model.User;
 import guicarneiro.com.origin.service.inegibility.IneligibleByAgeOver60;
-import guicarneiro.com.origin.service.inegibility.IneligibleByNoVehicle;
 import guicarneiro.com.origin.service.inegibility.IneligibleByZeroIncome;
-import guicarneiro.com.origin.service.risk.*;
+import guicarneiro.com.origin.service.risk.HasDependentsRule;
+import guicarneiro.com.origin.service.risk.HasMortgagedHouseRule;
+import guicarneiro.com.origin.service.risk.IsMarriedRule;
 
 public class RiskProfileDisability extends BaseRiskProfile {
 
     public RiskProfileDisability(User user) {
         super(user);
-        riskRules.add(new HouseMortgagedStrategyRule(user, 1));
-        riskRules.add(new HasDependentsStrategyRule(user, 1));
-        riskRules.add(new IsMarriedStrategyRule(user, -1));
+        riskRules.add(new HasMortgagedHouseRule(user, 1));
+        riskRules.add(new HasDependentsRule(user, 1));
+        riskRules.add(new IsMarriedRule(user, -1));
 
         ineligibilityRules.add(new IneligibleByZeroIncome(user));
         ineligibilityRules.add(new IneligibleByAgeOver60(user));

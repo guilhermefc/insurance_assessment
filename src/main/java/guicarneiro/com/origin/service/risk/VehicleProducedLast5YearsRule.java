@@ -12,6 +12,8 @@ public class VehicleProducedLast5YearsRule extends BaseRiskRule {
 
     @Override
     public int apply() {
+        if(getUser().getVehicle() == null) return 0;
+
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
         int yearDiff = currentYear - getUser().getVehicle().getYear();
 

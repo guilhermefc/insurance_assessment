@@ -2,7 +2,10 @@ package guicarneiro.com.origin.service;
 
 import guicarneiro.com.origin.model.RiskAssessment;
 import guicarneiro.com.origin.model.User;
-import guicarneiro.com.origin.service.engine.*;
+import guicarneiro.com.origin.service.engine.RiskProfileAuto;
+import guicarneiro.com.origin.service.engine.RiskProfileDisability;
+import guicarneiro.com.origin.service.engine.RiskProfileHome;
+import guicarneiro.com.origin.service.engine.RiskProfileLife;
 import org.springframework.stereotype.Service;
 
 

@@ -2,15 +2,15 @@ package guicarneiro.com.origin.service.risk;
 
 import guicarneiro.com.origin.model.User;
 
-public class HasDependentsStrategyRule extends BaseRiskRule {
+public class IncomeOver200KRule extends BaseRiskRule {
 
-    public HasDependentsStrategyRule(User user, int score) {
+    public IncomeOver200KRule(User user, int score) {
         super(user, score);
     }
 
     @Override
     public int apply() {
-        if(getUser().getDependents() > 0) {
+        if(super.getUser().getIncome() > 200) {
             return getScore();
         }
         return 0;

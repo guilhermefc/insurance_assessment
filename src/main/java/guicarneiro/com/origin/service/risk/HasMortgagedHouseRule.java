@@ -3,9 +3,9 @@ package guicarneiro.com.origin.service.risk;
 import guicarneiro.com.origin.model.OwnershipStatus;
 import guicarneiro.com.origin.model.User;
 
-public class HouseMortgagedStrategyRule extends BaseRiskRule {
+public class HasMortgagedHouseRule extends BaseRiskRule {
 
-    public HouseMortgagedStrategyRule(User user, int score) {
+    public HasMortgagedHouseRule(User user, int score) {
         super(user, score);
     }
 

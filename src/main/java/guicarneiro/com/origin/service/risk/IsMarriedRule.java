@@ -3,9 +3,9 @@ package guicarneiro.com.origin.service.risk;
 import guicarneiro.com.origin.model.MaritalStatus;
 import guicarneiro.com.origin.model.User;
 
-public class IsMarriedStrategyRule extends BaseRiskRule {
+public class IsMarriedRule extends BaseRiskRule {
 
-    public IsMarriedStrategyRule(User user, int score) {
+    public IsMarriedRule(User user, int score) {
         super(user, score);
     }
 

@@ -1,6 +1,7 @@
 package guicarneiro.com.origin.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.validation.constraints.NotNull;
 
 public class House {
