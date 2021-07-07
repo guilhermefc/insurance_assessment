@@ -1,15 +1,15 @@
 package guicarneiro.com.origin.service.inegibility;
 
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 public abstract class BaseIneligibility implements IneligibilityRule {
-    private final User user;
+    private final UserApplicationProfile user;
 
-    public BaseIneligibility(User user) {
+    public BaseIneligibility(UserApplicationProfile user) {
         this.user = user;
     }
 
-    public User getUser() {
+    public UserApplicationProfile getUser() {
         return user;
     }
 

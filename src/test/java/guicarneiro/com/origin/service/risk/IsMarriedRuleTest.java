@@ -1,7 +1,7 @@
 package guicarneiro.com.origin.service.risk;
 
 import guicarneiro.com.origin.model.MaritalStatus;
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 import guicarneiro.com.origin.utils.TestUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,7 @@ class IsMarriedRuleTest {
     @Test
     @DisplayName("When user has no maritalStatus should return base score")
     public void testIsMarriedRuleTestNull() {
-        User user = new User(0, 0, null, 0, null, List.of(), null);
+        UserApplicationProfile user = new UserApplicationProfile(0, 0, null, 0, null, List.of(), null);
         RiskQuestionsRule rule = new RiskQuestionsRule(user, TestUtils.inputScore);
         assertEquals(TestUtils.baseScore, rule.apply());
     }
@@ -23,7 +23,7 @@ class IsMarriedRuleTest {
     @Test
     @DisplayName("When user has maritalStatus as single should return base score")
     public void testIsMarriedRuleTestSingle() {
-        User user = new User(0, 0, null, 0, MaritalStatus.SINGLE, null, null);
+        UserApplicationProfile user = new UserApplicationProfile(0, 0, null, 0, MaritalStatus.SINGLE, null, null);
 
         RiskQuestionsRule rule = new RiskQuestionsRule(user, TestUtils.inputScore);
         assertEquals(TestUtils.baseScore, rule.apply());
@@ -32,7 +32,7 @@ class IsMarriedRuleTest {
     @Test
     @DisplayName("When user has maritalStatus as married should return input score")
     public void testIsMarriedRuleTestMarried() {
-        User user = new User(0, 0, null, 0, MaritalStatus.MARRIED, null, null);
+        UserApplicationProfile user = new UserApplicationProfile(0, 0, null, 0, MaritalStatus.MARRIED, null, null);
 
         IsMarriedRule rule = new IsMarriedRule(user, TestUtils.inputScore);
         assertEquals(TestUtils.inputScore, rule.apply());

@@ -1,10 +1,10 @@
 package guicarneiro.com.origin.service.risk;
 
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 public class HasDependentsRule extends BaseRiskRule {
 
-    public HasDependentsRule(User user, int score) {
+    public HasDependentsRule(UserApplicationProfile user, int score) {
         super(user, score);
     }
 

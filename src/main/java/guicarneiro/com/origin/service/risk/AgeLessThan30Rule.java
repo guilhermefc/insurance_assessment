@@ -1,10 +1,10 @@
 package guicarneiro.com.origin.service.risk;
 
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 public class AgeLessThan30Rule extends BaseRiskRule {
 
-    public AgeLessThan30Rule(User user, int score) {
+    public AgeLessThan30Rule(UserApplicationProfile user, int score) {
         super(user, score);
     }
 

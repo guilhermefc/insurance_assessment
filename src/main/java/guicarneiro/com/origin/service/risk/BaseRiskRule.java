@@ -1,17 +1,17 @@
 package guicarneiro.com.origin.service.risk;
 
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 public abstract class BaseRiskRule implements RiskRule {
-    private final User user;
+    private final UserApplicationProfile user;
     private final int score;
 
-    public BaseRiskRule(User user, int score) {
+    public BaseRiskRule(UserApplicationProfile user, int score) {
         this.user = user;
         this.score = score;
     }
 
-    public User getUser() {
+    public UserApplicationProfile getUser() {
         return user;
     }
 

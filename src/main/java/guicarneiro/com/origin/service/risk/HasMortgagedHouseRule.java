@@ -1,11 +1,11 @@
 package guicarneiro.com.origin.service.risk;
 
 import guicarneiro.com.origin.model.OwnershipStatus;
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 public class HasMortgagedHouseRule extends BaseRiskRule {
 
-    public HasMortgagedHouseRule(User user, int score) {
+    public HasMortgagedHouseRule(UserApplicationProfile user, int score) {
         super(user, score);
     }
 

@@ -1,7 +1,7 @@
 package guicarneiro.com.origin.service.engine;
 
 import guicarneiro.com.origin.model.InsuranceStatus;
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 import guicarneiro.com.origin.service.inegibility.BaseIneligibility;
 import guicarneiro.com.origin.service.inegibility.IneligibilityRule;
 import guicarneiro.com.origin.service.risk.*;
@@ -11,11 +11,11 @@ import java.util.List;
 
 public abstract class BaseRiskProfile {
 
-    final User user;
+    final UserApplicationProfile user;
     final List<BaseRiskRule> riskRules = new ArrayList<>();
     final List<BaseIneligibility> ineligibilityRules = new ArrayList<>();
 
-    public BaseRiskProfile(User user) {
+    public BaseRiskProfile(UserApplicationProfile user) {
         this.user = user;
         addDefaultRiskRules();
     }

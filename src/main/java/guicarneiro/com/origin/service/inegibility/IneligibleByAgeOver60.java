@@ -1,10 +1,10 @@
 package guicarneiro.com.origin.service.inegibility;
 
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 public class IneligibleByAgeOver60 extends BaseIneligibility{
 
-    public IneligibleByAgeOver60(User user) {
+    public IneligibleByAgeOver60(UserApplicationProfile user) {
         super(user);
     }
 

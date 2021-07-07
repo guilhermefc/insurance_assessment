@@ -1,10 +1,10 @@
 package guicarneiro.com.origin.service.inegibility;
 
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 public class IneligibleByNoVehicle extends BaseIneligibility{
 
-    public IneligibleByNoVehicle(User user) {
+    public IneligibleByNoVehicle(UserApplicationProfile user) {
         super(user);
     }
 

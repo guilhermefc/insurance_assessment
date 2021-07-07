@@ -1,10 +1,10 @@
 package guicarneiro.com.origin.service.inegibility;
 
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 public class IneligibleByNoHome extends BaseIneligibility{
 
-    public IneligibleByNoHome(User user) {
+    public IneligibleByNoHome(UserApplicationProfile user) {
         super(user);
     }
 

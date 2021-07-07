@@ -1,13 +1,13 @@
 package guicarneiro.com.origin.service.risk;
 
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 import java.util.Collections;
 import java.util.Optional;
 
 public class RiskQuestionsRule extends BaseRiskRule {
 
-    public RiskQuestionsRule(User user, int score) {
+    public RiskQuestionsRule(UserApplicationProfile user, int score) {
         super(user, score);
     }
 

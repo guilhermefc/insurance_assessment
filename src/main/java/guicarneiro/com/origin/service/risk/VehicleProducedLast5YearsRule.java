@@ -1,12 +1,12 @@
 package guicarneiro.com.origin.service.risk;
 
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 import java.util.Calendar;
 
 public class VehicleProducedLast5YearsRule extends BaseRiskRule {
 
-    public VehicleProducedLast5YearsRule(User user, int score) {
+    public VehicleProducedLast5YearsRule(UserApplicationProfile user, int score) {
         super(user, score);
     }
 

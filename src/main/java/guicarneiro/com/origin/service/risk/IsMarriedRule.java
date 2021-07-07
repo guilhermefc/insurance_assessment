@@ -1,11 +1,11 @@
 package guicarneiro.com.origin.service.risk;
 
 import guicarneiro.com.origin.model.MaritalStatus;
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 public class IsMarriedRule extends BaseRiskRule {
 
-    public IsMarriedRule(User user, int score) {
+    public IsMarriedRule(UserApplicationProfile user, int score) {
         super(user, score);
     }
 

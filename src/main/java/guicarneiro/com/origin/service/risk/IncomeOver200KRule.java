@@ -1,10 +1,10 @@
 package guicarneiro.com.origin.service.risk;
 
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 public class IncomeOver200KRule extends BaseRiskRule {
 
-    public IncomeOver200KRule(User user, int score) {
+    public IncomeOver200KRule(UserApplicationProfile user, int score) {
         super(user, score);
     }
 

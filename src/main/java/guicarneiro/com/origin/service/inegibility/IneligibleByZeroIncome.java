@@ -1,9 +1,9 @@
 package guicarneiro.com.origin.service.inegibility;
 
-import guicarneiro.com.origin.model.User;
+import guicarneiro.com.origin.model.UserApplicationProfile;
 
 public class IneligibleByZeroIncome extends BaseIneligibility{
-    public IneligibleByZeroIncome(User user) {
+    public IneligibleByZeroIncome(UserApplicationProfile user) {
         super(user);
     }
 
