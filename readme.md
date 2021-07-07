@@ -1,7 +1,7 @@
-#Origin-backend-take-home-assignment
+# Origin-backend-take-home-assignment
 https://github.com/OriginFinancial/origin-backend-take-home-assignment
 
-##(1) Instructions to run the code; 
+## (1) Instructions to run the code; 
 Requirements:
 - Java 11
 
@@ -32,11 +32,11 @@ You should receive a response like:<br>
 } 
 ```
 
-##(2) what were the main technical decisions you made; 
+## (2) what were the main technical decisions you made; 
 1. Project language and framework: I choose Java and Spring Boot due to my previous experiences as an Android developer (before moving to Kotlin) and nowadays building backend solutions with my team.
 2. Business rules implementation: I really enjoyed this puzzle, at first look it seemed a simple risk engine but depending on how you approach it, it could easily become a highly coupled code resulting in difficulty to support and maintain. So I built a simple approach using a list of rules that made it easy to test unitary each risk rule and ineligibility case and also tried to made it extensible and open to new insurance lines.   
 
 
 
-##(3) relevant comments about your project
+## (3) relevant comments about your project
 I tried to keep the architecture and functions scope as close to required as possible to focus on the correctness and testability of the main use case that was the risk engine. So I did not build any persistence layer, error handling layer  neither additional features out of scope.
