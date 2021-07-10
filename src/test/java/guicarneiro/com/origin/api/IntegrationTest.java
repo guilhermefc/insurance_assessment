@@ -33,5 +33,3 @@ public abstract class IntegrationTest {
         wireMockServer.stop();
     }
 }
-
-
